@@ -1,20 +1,24 @@
 package actividad2;
 
 public class Circulo {
-    public double circunferencia;
-    public double area;
     public double radio;
     
     //Constructor que asigna el ID como radio
-    public Circulo(double id){
-        this.radio = id;
+    public Circulo() {
+        this(0);
+}
+    Circulo(double id) {
+        this.radio=id;
     }
+
     //Metodos que realizan las operaciones necesarias
-    public void CalcularArea(){
-        area = 3.14 * Math.pow(radio, 2);
+    public double CalcularArea(){
+        double area = 3.14 * Math.pow(radio, 2);
+        return area;
     }
-    public void CalcularCircunferencia(){
-        circunferencia = 3.14*2*radio;
+    public double CalcularCircunferencia(){
+        double circunferencia = 3.14*2*radio;
+        return circunferencia;
     }
     
 }

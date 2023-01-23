@@ -1,17 +1,29 @@
-package actividad1;
+package actividad2;
 
 public class Cuadrado {
     
 	public double lado;
-    public double diagonal;
-    public double area;
-    public double perimetro;
 
-    public Cuadrado(double id) {
-        this.lado=id;
-        this.perimetro = lado*4;
-        this.area = lado*lado;
-        this.diagonal = Math.sqrt(Math.pow(lado,2)*2);
+    //Constructor que asigna el ID como longitud
+    public Cuadrado() {
+            this(0);
+    }
+        Cuadrado(double id) {
+            this.lado=id;
+        }
+
+    //Metodos que realizan las operaciones necesarias
+    public double CalcularPerimetro(){
+        double perimetro = lado*4;
+        return perimetro;
+    }
+    public double CalcularArea(){
+        double area = lado*lado;
+        return area;
+    }
+    public double CalcularDiagonal(){
+        double diagonal = Math.sqrt(Math.pow(lado,2)*2);
+        return diagonal;
     }
 
 }
