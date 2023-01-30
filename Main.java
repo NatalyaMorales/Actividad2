@@ -4,11 +4,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-            System.out.println("Programa que calcula operaciones de: \n1. Cuadrado\n2. Circulo");
+        Scanner sc = new Scanner(System.in);    
+            boolean bandera = true;
+            while (bandera) {
+            System.out.println("\nPrograma que calcula operaciones de: \n1. Cuadrado\n2. Circulo\n3. Salir");
             System.out.println("\nIngrese el numero de la figura:");
             int figura = sc.nextInt();
+            //int figura = Integer.parseInt(sc.nextLine());
 
+            
             if (figura == 1){
                 System.out.println("\nIngrese la medida del lado:");
                 int id = sc.nextInt();
@@ -20,8 +24,9 @@ public class Main {
                 System.out.println("\nPara el cuadrado con lado "+id);
                 switch (op){
                     case 1:
-                    double areaCuadrado = (int)cuadrado.CalcularArea();
-                    System.out.println("Area = " +areaCuadrado );
+                    //double areaCuadrado = (int)cuadrado.CalcularArea();
+                    //System.out.println("Area = " +areaCuadrado );
+                    System.out.println(cuadrado.CalcularArea());
                     break;
 
                     case 2:
@@ -57,5 +62,10 @@ public class Main {
                 }
                 sc.close();
             }
-        }   
+            System.out.println("Programa que calcula operaciones de: \n1. Cuadrado\n2. Circulo\n3. Salir");
+            System.out.println("\nIngrese el numero de la figura:");
+            figura = sc.nextInt();
+
+            } 
+        } 
     } 
